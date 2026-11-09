@@ -33,7 +33,7 @@ fun reply(support: Support, input: String): String =
         support.answer(input)
     } catch (e: AnthropicServiceException) {
         val status = e.statusCode()
-        val reason = "anthropic: $status ${e.errorType().map { it.asString() }.orElse("")}".trim()
+        val reason = "anthropic: $status ${e.type().map { it.asString() }.orElse("")}".trim()
         if (status == 401 || status == 408 || status == 429 || status >= 500) "#tinyeval couldnt_run $reason\n" else reason
     } catch (e: AnthropicIoException) {
         "#tinyeval couldnt_run ${e.cause?.message ?: e.message}\n" // the cause says "timeout" or "Failed to connect"
