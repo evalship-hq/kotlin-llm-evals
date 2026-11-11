@@ -16,7 +16,7 @@ jobs:
           java-version: 21
           cache: gradle
       - run: ./gradlew -q installDist
-      - run: ./tinyeval -n 3
+      - run: ./gradlew -q tinyeval --args="-n 3"
         if: env.ANTHROPIC_API_KEY != ''
       - run: echo "::notice::Add the ANTHROPIC_API_KEY repository secret to run the evals."
         if: env.ANTHROPIC_API_KEY == ''

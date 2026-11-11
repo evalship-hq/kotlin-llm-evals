@@ -1,4 +1,4 @@
-# Evals for the support bot. Build once with ./gradlew -q installDist, then run ./tinyeval.
+# Evals for the support bot. Run them with ./gradlew -q installDist tinyeval.
 # The worker starts the JVM and the client once, and answers every test case sent to it.
 worker build/install/support/bin/support
 
