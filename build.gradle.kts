@@ -8,7 +8,7 @@ repositories {
 }
 
 dependencies {
-    implementation("com.anthropic:anthropic-java:3.6.0")
+    implementation("com.anthropic:anthropic-java:3.12.0")
     implementation("com.evalship:tinyeval:0.11.0")
 }
 
