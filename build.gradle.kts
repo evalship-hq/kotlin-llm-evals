@@ -9,7 +9,7 @@ repositories {
 
 dependencies {
     implementation("com.anthropic:anthropic-java:3.6.0")
-    implementation("com.evalship:tinyeval:0.11.0")
+    implementation("com.evalship:tinyeval:0.12.2")
 }
 
 kotlin {
